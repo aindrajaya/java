@@ -40,3 +40,17 @@ Kelengkapan codidng java
 1. Java SDK
 2. IDE
 3. Build Tools (Maven/ Gradle)
+
+#Penamaan file java, ada 3 bagian
+1. Group ID = nama aplikasi (biasana nama package utama/ biasanya nama domain yg dibalik + nama package aplikasi)
+2. Artifact id = adalah nama modul2 yang ada di dalam aplikasi (modul web, modul mobile, dll, payment-channel)
+3. Version = nomor versi
+
+#Susuna struktur folder di maven
+main itu package kode utama/aplikasi
+-java = kode java
+-reources = file2 yang dibutuhkan untuk menjalankan aplikasi
+target itu tempat hasil compile nya, biasanya jangan di commit
+pom.xml adalah file konfigurasi maven
+4. Packaging jar/war
+3. 

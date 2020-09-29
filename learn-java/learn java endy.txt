@@ -1,0 +1,42 @@
+STRUKTUR APLIKASI JAVA
+----------------
+Aplikasi (banyak Package, harus ada class nya)
+-Package (terdiri banyak class)
+-- Class
+---- Constructur
+---- Property
+---- Method
+---- Class (In Class)
+
+Error cannot find symbol, bisa variabel, class yang tidak bisa ditemukan
+[javac Halo.java
+Error 1. 
+Halo.java:3: error: cannot find symbol
+  private Data sekarang = new Date();
+
+  symbol: class Date
+  location: class Halo
+
+Error 2.
+Halo.java:3: error: cannot find symbol
+  private Date sekarang = new Date();
+
+  symbol: class Date
+  location: class Halo
+]
+
+javac => java compiler untuk membuat file compiler class
+java untuk menjalankan class, namun tidak semua class bisa dijalankan. Untuk menjalankan suatu class harus menggunakan method khusus [public static void main(String[array] x){}]
+package pada aplikasi java biasa dibungkus dalam satu file, namana JAR (Java ARchive). Cara bikin jar itu gampang, dia adalah file compress (file .zip biasa)
+
+#Why Java?
+1. Penggunaan luas: web, mobile, desktop, background proecssing, dsb
+2. Library
+3. Ekosistem
+4. Mature
+5. Backward Compatibility
+
+Kelengkapan codidng java
+1. Java SDK
+2. IDE
+3. Build Tools (Maven/ Gradle)

@@ -54,3 +54,36 @@ target itu tempat hasil compile nya, biasanya jangan di commit
 pom.xml adalah file konfigurasi maven
 4. Packaging jar/war
 3. 
+
+#Class dan Objec
+1. Class
+- apa itu Class = adalah tipe data yang dibikin sendiri
+- Why Class? Membuat tipe data sesuai business process. Misal Nasabah, rekening, mutasi dsb.
+-- Supaya kode program lebih mudah dipahami
+2. Object
+- object adalah variabel yang dibuat dari class tersebut, disebut juga dengan istilah instance. `static`: variabel/method yang terafiliasi dengan `class`. `instance xxx`: merupakan variabel/methods yang terafiliasi dengan object.
+Ada class Variabel/static var(karena dia miliknya class atau terafiliasi dengan class) dan Instance variabel (dia value nya tergantung dengan masing2 instance/object)
+Apakah bisa menggunakan static variable di instance methods bisa, tapi  instance variabel tidak bisa digunakan di static methods
+
+#Deklarasi di Java
+1. Deklarasi Class => modifier(public private protected default) class namaClass 
+=> Modifier
+public = bisa diakses dimana-mana
+private = cmn bisa diakses di dalam kelas tersebut
+protected = bisa diakses di subclass dan bisa diakses di package yang sama
+default = bisa diakses di package yang sama
+=> Dimana kalo inheritance tapi package beda
+=> 1 file bisa banyak class, tapi best practice nya kalau bisa 1 class. Dan 1 file cuman boleh ada 1 public class, nama file dan class harus sama huruf kecil besarnya juga harus sama
+==================================
+2. Deklarasi Variabel, ada namanya ada tipe datanya, dan semua tipe data harus disebutkan dan ada akses modifer(public, protected, default, private)
+===============
+3. Naming convention, kalau class Harus huruf besar dulu(karena berhubungan dengan benda), kalau 2 kata harus camelcase, tapi kalau variale dan method camel casenya huruf depan kata pertama harus huruf kecil dulu(karena jika method maka akan melakukan sesuatu/kata kerja)
+=>Deklarasi Method
+[public String getName()] = String merupakan tipe data yg dikeluarkan
+Kalau di java ketika mengembalikan sesuatu bisa di return, namun kalau tidak menghasilkan sesuatu maka void
+
+#DEmo baca file
+1. add variable sesuai dengan file, dan lalu generate variabel tersebut dengan getter and setter
+2. lalu ubah Constructor
+agar bisa menerima tanpa argument/ supaya bisa jalan tanpa argumen
+[public Siswa(){}]

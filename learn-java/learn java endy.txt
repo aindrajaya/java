@@ -87,3 +87,6 @@ Kalau di java ketika mengembalikan sesuatu bisa di return, namun kalau tidak men
 2. lalu ubah Constructor
 agar bisa menerima tanpa argument/ supaya bisa jalan tanpa argumen
 [public Siswa(){}]
+3. Create package untuk file importer (di java sdh ada tipe data file)
+4. Banyak data, di dalam java ada beberapa method untuk menyimpan banyak data. yg pertama list(menyimpan dengan urutan sesuai), set(menjaga keunikan/ anti duplikat), keyValue(ada variabelnya yg unik, sedangkan value variabelnya bebas apa aja)
+5. [public List<Siswa> proses(){}] => pada class tersebut menjanjikan return value berupa List, maka akan terjadi error. Namun bisa diakali dengna return null(null mengembalikan kekosongan) jika kodingan belum selesai.

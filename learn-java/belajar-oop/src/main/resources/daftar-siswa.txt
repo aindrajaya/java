@@ -2,3 +2,4 @@ nomor_absen,nama_siswa,email
 123,Rudiansya,rudi@gmail.com
 456,Rudiansyaharudin,rudi2@gmail.com
 789,Rudiansyahbana,rudi3@gmail.com
+122,Rudi,rudi4@gmail.com

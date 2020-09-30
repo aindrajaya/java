@@ -46,6 +46,28 @@ public class FooControllerAppIntegrationTest{
   private MockMvc mockMvc;
   
   @Test
-}
+  public void whenTestApp_thenEmptyResponse() throws
+  Exception{
+    this.mockMvc.perform(get("/foos"))
+      .andExpect(status().isOk())
+      .andExpect(...);
+  }
+}]
+To avoid creating the whole context and test only our MVC Controllers, we can use @WebMvcTest
+[@RunWith(SpringRunner.class)
+@WebMvcTest(FooContoller.class)
+public class FooControllerWebLayerIntegrationTest{
+  @Autowired
+  private MockMvc mockMvc;
 
-]
+  @MockBean
+  private IFooService service;
+
+  @Test()
+  public void
+  whenTestMovController_thenRetrieveExpectedResult() throws Exception{
+    //...
+    this.mockMvc.perform(get("foos"))
+      .andExpect(...);
+  }
+}]	

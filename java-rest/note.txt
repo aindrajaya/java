@@ -1,0 +1,51 @@
+BUILD A REST API WITH SPRING AND JAVA CONFIG
+(https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration)
+-------------------------------------
+1. Overview
+This article shows how to set up REST in Spring- the Controller and HTTP response codes, configuration of payload marshalling and content negotiation.
+
+2. Understanding REST in Spring
+The Spring framework supports two ways of creating RESTful services:
+--> Using MVC with ModelAndView
+--> using HTTP message converters
+The ModelAndView approach is older and much better documented, but also more verboes and configuration heavy. It tries to shoehorn the REST paradigm into the old model, whihc is not without problems. The Spring team understood this and provided first-class REST support starting with Spring 3.0.
+The new approach, based on HttpMessageConverter and annotations, is much more lightweight and easy to implement. Configurations is minimal, and it provides sensible defaults for what you would expect from a RESTful service.
+
+3. The Java Configuration
+[@Configuration
+@EnableWebMvc
+public class WebConfig{
+  //
+}]
+The new @EnableWebMvc annotation does some useful things-specifically, in the case of REST, it detects the existence of Jackson and JAXB 2 on the classpath and automaticallyh creates and registers default JSON and SML converters. The functionality of the annotation is equivalent to the XML version
+<mvc:annotation-driven/>
+This is a shortcut, and though it may be useful in many situations, it's not perfect. When more complex configuration is needed, remove the annotation and extend WebMvcConfigurationSupport directly.
+3.1. Using Spring Boot
+If we're using the @SpringBootApplication annotation and the spring-webmvc library is on the classpath, then the @EnableWebMvs annotation is added automatically with a default configuration. We can still add MVC functionality to this configuration byh implementing the WebMvcConfigurer interface on a @Configuration annotated class. We can also use a WebMvcRegistrationsAdapter instance to provide our own RequestMappingHandlerMapping, RequestMappingHandlerAdapter, or ExceptionHandlerExceptionResolver implementations. Finally, if we want to discard Spring Boot's MVC features and declare a custom configuration, we can do so by using the @EnableWebMvc annotation.
+
+4. Testing the Spring Context
+Starting with Spring 3.1, we get first-class testing support for @Configuration classes:
+[@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(
+  classes = {WebConfig.class, PersistenceConfig.class},
+  loader = AnnotationConfigContextLoader.class)
+public class SpringContextIntegrationTest{
+  @Test
+  public void contextLoads(){
+    //When
+  }
+}]
+We're specifying the Java  configuration classes with the @ContextConfguration annotation. The new AnnotationConfigContextLoader loads the ben definitions from the @Configuration classes. Notice that the WebConfig configuration class was no included in the test because it needs to run a Servlet context, whih is not provided.
+4.1 Using Spring Boot
+Spring Boot provides several annotations to set up the Spring ApplicationContext for our tests in a more intuitive way. We can load onlly a particular slice of the application configuration, or we cna simulate the whole context startup process. For instance, we can use the @SpringBootTest annotation if we want the entire contexgt to be created without starting server. With that in place, we can then add the @AutoConfigureMockMvc to inject a MockMvc instance and send HTTP requests:
+[@RunWith(SPringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class FooControllerAppIntegrationTest{
+  @Autowired
+  private MockMvc mockMvc;
+  
+  @Test
+}
+
+]

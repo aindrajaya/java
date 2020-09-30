@@ -1,0 +1,14 @@
+BUILD A REST API WITH SPRING AND JAVA CONFIG
+(https://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration)
+-------------------------------------
+1. Overview
+This article shows how to set up REST in Spring- the Controller and HTTP response codes, configuration of payload marshalling and content negotiation.
+
+2. Understanding REST in Spring
+The Spring framework supports two ways of creating RESTful services:
+--> Using MVC with ModelAndView
+--> using HTTP message converters
+The ModelAndView approach is older and much better documented, but also more verboes and configuration heavy. It tries to shoehorn the REST paradigm into the old model, whihc is not without problems. The Spring team understood this and provided first-class REST support starting with Spring 3.0.
+The new approach, based on HttpMessageConverter and annotations, is much more lightweight and easy to implement. Configurations is minimal, and it provides sensible defaults for what you would expect from a RESTful service.
+
+3. 

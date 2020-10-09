@@ -70,4 +70,8 @@ public class FooControllerWebLayerIntegrationTest{
     this.mockMvc.perform(get("foos"))
       .andExpect(...);
   }
-}]	
+}]
+We can find detailed information on this subject on our ‘Testing in Spring Boot' article.
+
+5. The Controller
+	

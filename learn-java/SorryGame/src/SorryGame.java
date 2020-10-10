@@ -1,13 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class SorryGame {
-	private Player player;
+	private List<Player> players;
 	private Deck deck;
 	private Square[] squares;
 	
 	public SorryGame(){
 		this.deck = new Deck();
 		createSquares();
-		this.player = new Player("blue", squares[0]);
+		this.players = new ArrayList<>();
+		this.players.add(new Player("blue", squares[0]));
+		this.players.add(new Player("red", squares[0]));
 	}
 	
 	private void createSquares(){
@@ -29,8 +33,11 @@ public class SorryGame {
 	
 	public void play() {
 		for(int i=0; i<5; i++) {
-			player.takeTurn(deck);
-			System.out.println(" ");
+			System.out.println("Starting round "+ i);
+			for(Player player: players) {
+				player.takeTurn(deck);
+				System.out.println(" ");
+			}
 		}
 	}
 	

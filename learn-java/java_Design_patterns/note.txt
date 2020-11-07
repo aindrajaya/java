@@ -2,7 +2,32 @@ JAVA DESIGN PATTERNS
 23 Design Pattern
 ----------------------
 Chapter 1: Introduction
+Over a periro of time, software engineers were facing a common problem during the development of various software programs. There wer no standards to instruct them how to design and proceed. The issue became significant when a new member (experienced or unexpectedl it does not matter) koined the team and was assigned to do something from scratch or to do modify something in the existing product. AS already mentioned, since there were no standards, it took a lot of effort to become familiar witht the existing product. Design pattern simply addresses this issua and mae s a common platform for all devleopers. We shall rememebr that these pattersn were intended to be applied in object-oriented design with the intentiono of reuse. In 1994–95, four Is—Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides—published Design Patterns—Elements of Reusable Object-Oriented Software (Addison-Wesley, 1995) in which they initiated the concept of design patterns for software development. These Is became known as the Gang of Four (GoF). They introduced 23 patterns which were developed by experienced software engineers over a very long period of time. As a result, now if any new member joins a development team and he knows that the new system is following some specific design patterns, he can actively participate in the development process with the other members of the team within a very short period of time. The first concept of real-life design pattern came from the building architect Christopher Alexander. In his experience he came to understand some common problems. Then he tried to address those issues with related solutions (for building design) in a uniform manner. People believe that the software industry grasped those concepts because software engineers can also relate their product applications with these building applications.
+------------------------------
+Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.
+—Christopher Alexander
+------------------------------
+GoF assures us that though the patterns were described for buildings and towns, the same concepts can be applied for the patterns in object-oriented design. We can substitute the original concepts of walls and doors with objects and interfaces. The common thing in both is that at the core, both types of patterns are solution to problems in some context.
+In 1995 the original concepts were discussed with C++. Sun Microsystems released its first public implementation—Java 1.0—in 1995 and then it went through various changes. So, the key point is: Java was relatively new at that time. In this book, we’ll try to examine these core concepts with Java. The book is written in Java, but still, if you are familiar with any other popular programming languages (C#, C++ etc.), you can also grasp the concept very easily because I has made as his main focus the design patterns and how
+we can implement the concept with the basic Java language construct. Again: he has chosen simple, easy-toremember examples to help you to develop these concepts easily.
+
 Chapter 2: Observer Patterns <<<<<<<<<<<<<<<<<<<<<<<<
+GoF Definition: Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+#Concept
+In this pattern, there are many observer (objects) which are observing a particular object (object). Observers are basically interested and want to be notified whenthere is a change made inside that subject. So, they register themselves to that subject. When they lose interest in the subject simply unregister from the subject. Sometimes this model is also referred to as the Publisher-Subscriber model.
+#Real-Life Example
+We can think about a celebrity who has many fans. Each of theses fans wants to get all the latest updates of his/her favorite celebrity. So, he/she can follow the celebrity as long as his/her interest persists. When he loses interest, he simply stops following that celebrity. Here we can think of the fan as an observer and the celebrity as a subject.
+#Computer World Example
+In the world of computer science, consider a simple UI-based example, where this UI is connected with some database (or business logic). A user can execute some query through that UI and after searching the database, the result is reflected back in the UI. In most of the cases we segregate the UI with the database. If a change occurs in the database, the UI should be notified so that it can update its display according to the change. 
+#Illustration
+Now let us directly enter into our simple example. Here I have created one observer (though you can create more) and one subject. The subject maintains a list for all of its observers (though here we have only one for simplicity). Our observer is getting the norifications when the flag value changed to 5 or 25. But there is no notification when the flag value changed to 50 because by this time the observer has unregistered himself from the subject.
+--------------
+>>UML Class Diagram
+[GAMBAR UML]
+--------------
+>>Package Explorer View
+
+
 Chapter 3: Singleton Patterns
 Chapter 4: Proxy Patterns
 Chapter 5: Decorator Paterns
@@ -10,9 +35,31 @@ Chapter 6: Template Method Patterns
 Chapter 7: Strategy Patterns (Or, Policy Patterns)
 Chapter 8: Adapter Patterns
 Chapter 9: Command Patterns
+GoF Definition: Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+#Concept 
+here requests are encapsulated as objects. In general, four terms are associated- invoker, client, command, and receiver. A command object is capable of calling a particular method in the receiver. It stores the parameters of the methods of receiver. An invoker only knows about the command interface, but it is totally unware about the concrete commands. The client object holds the invoker object and the command object(s). The client decides which of these commands needs to execute at a particular point in time. To do that, he/she passes the command object to the invoker to execute that particular command. 
+#Real-life Example
+We cannot change our past, but frequently we wish we could do so. Unfortunately, we do not have any such device yet to fulfill that wish. But we can undo and redo many other operations in our daily life. We can erase a pencil drawing with a rubber. We can re-architect our living places. And, most importatnt, we can forget bad memories and start a fresh journey. So, you must acknowledge that undo/redo operations are part of our life and we are doing those through some commands- either externally or internally.
+#Computer World Example
+The above scenario applies with Microsoft paint also. There we can do the undo/redo operations easily through some menu options or shortcuts keys.
+#Illustartion
+Consider this simple example in this context. For simplicity, we are dealing with only wto command, MyUndoCommand and MyRedoCommand. All naming conventions are sued for your easy reference.
+#UML Class Diagram
+[GAMBAR]
+ 
+
 Chapter 10: Iterator Patterns 
 Chapter 11: Facade Patterns
 Chapter 12: Factory Method Patterns <<<<<<<<<<<<<<<<<<<<<<<<
+#Concept
+The concept can be best described with the examples below
+#Real-Life Example
+Suppose you have two different types of televisions- on with an LED screen and another with an LCD screen. If any of these starts malfunctioning, you will call a TV repairman to request a visit to your residence. The repairment must ask first what kind of TV is nonoperationsl. As per your input, he'll carry the required instruments with him.
+#Computer WOrld Example
+In a Windows application, we mayh have different database users (e.g., one uer uses Oracle and one may usej Sql server). Now whenever we need to insert data in our database we need to create wither an SqlConnection or an Oracle Connection first; only then we can proceed. If we put them into simple if-else, we need to repeat lots of codes and it doesn't look good. We can use the factory pattern to solve theses types of prpbolems. The basic structure is defined with an abstract class; our subclasses will be derived from this class. The subclasses will take the responsibility of the instantiation process. 
+#Illustration
+Here I have created all classes into a single file. Please go through the code. Note that here we have two animal types- Duck and Tiger. And whenever we try to use  a new type, Lion, which wast not implemented earlier, and exception will be thrown. If you want to omit this extra part, you can do that. In that case, we also do not need ot take precautinos for anyh exceptions.
+
 Chapter 13: Memento Patterns
 Chapter 14: State Patterns <<<<<<<<<<<<<<<<<<<<<<<<
 Chapter 15: Builder Patterns

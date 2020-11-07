@@ -62,6 +62,15 @@ Here I have created all classes into a single file. Please go through the code. 
 
 Chapter 13: Memento Patterns
 Chapter 14: State Patterns <<<<<<<<<<<<<<<<<<<<<<<<
+#Concept
+The concept is best described by the example that follow
+#Real-life Example
+Consider a network connection for the moment. Here the object (that is responsible for communication) can be in various states (e.g., already a connection is established, a connection is closed, or the object is listening through the connection). We can also think of a trafic signal in this context.
+#Computer World Example
+The above example is applicable in the computer world also. Let us at an additional exmaple: we have a job processing application where we can process only one job (or any certain number of jobs) at a time. Now if a new job appears, either the application will process that job or it will signal that the new job cannto be processed at this moment because the system is already processing the maximum number of jobs in it (i.e., its number of job processing capabilities has reached the ceiling)
+#Illustration
+Here we have picked a very simple sitching mechenism for turning a TV on/off. Suppose, we have a remote control to turn the TV on/off. Initially the TV is in the off state. When we press the power button, the TB will be on; upon the next press of the button, the TV will go off. We have implemented this concept with the state design pattern here.
+
 Chapter 15: Builder Patterns
 Chapter 16: Flyweight Patterns
 Chapter 17: Abstract Factory Patterns

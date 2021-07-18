@@ -1,0 +1,794 @@
+24 HOURS SAM'S TEACH YOU JAVA
+-----------------
+HOUR 1: BECOMMING A PROGRAMMER
+#Find out the reasons to learn Java
+--> Choosing a Language
+The key to learning how to program is to start with the right language. The programming language you choose often depends on the task you want to accomplish. Each language has strengths and weaknesses. Back in my day, young whippersnappers, people learned to program with the BASIC language because it was created with beginners in mind.
+{NOTE: The BASIC language was invented to be easy for students to learn )(the B in BASIC stands for Begginers). The downside using some from of BASIC is that it's easy to fall into sloppy programming habits with the language}.
+{NOTE: Early Java programmers had a less flattering slogan: "Write once, debug everywhere". The language has come a long way, baby, sincthe the first version released in 1996}
+Another important advantage is that Java requires a highly organized approach for getting programs to work. You must be particular about how you write programs and how they store and alter data.
+When you start writing Java programs, you might not see the language’s persnickety behavior as an advantage. You could tire of writing a program and having several errors to fix before the program even can be run. The benefit of this extra effort is that the software you create is more reliable, useful, and error-free.
+------------------------
+#Discover how programs work
+--> Telling the Computer What to Do
+A computer program, also called software, is a way to tell a computer to perform a task. Everything that the computer does, from booting up to shutting down, is done by a program. Mac OS X is a program; Minecraft is a program; the driver software that controls your printer is a program; even the dreaded blue screen of death on a crashed Windows PC is a program.
+If your house had its own butler and you were a control freak with a Type-A personality, you could give servant detailed set of instructions to follow every day, like this:
+Dear Mr. Jeeves,
+Please take care of these errands for me while I’m out asking Congress for a bailout:
+Item 1: Vacuum the living room.
+Item 2: Go to the store.
+Item 3: Pick up soy sauce, wasabi, and as many California sushi rolls as you can carry.
+Item 4: Return home.
+Sincerely, your lord and master,
+Bertie Wooster
+If you tell a human butler what to do, there's a certain amount of leeway in how your requests are fulfilled. If California rolls aren’t available, Jeeves could bring Boston rolls home instead.
+Computers don’t do leeway. They follow instructions literally. The programs that you write are followed precisely, one instruction at a time.
+The following example is a three-line computer program, written in BASIC. Take a look at it, but don’t worry too much about what each line is supposed to mean.
+[
+1 PRINT "Hey Tom, it's Bob from the office down the hall."
+2 PRINT "It's good to see you buddy, how've you been?"
+3 INPUT A$
+]
+Translated into English, this program is equivalent to giving a computer the following to-do list:
+[
+Dear personal computer,
+Item 1: Display the message, “Hey Tom, it’s Bob from the office down the hall.”
+Item 2: Ask the question, “It’s good to see you buddy, how’ve you been?”
+Item 3: Give the user a chance to answer the question.
+Sincerely, your lord and master,
+Ima Coder
+]
+Each line in a computer program is called a statement. A computer handles each statement ina  program in a specific codeer, in the same way that a cook folloes a recipe or Mr. Jeeves the butler follows the orders or Bertie Woosters. In BASIC, the line nmbers are used to put the statements in the correct order. Other languages such as Java do not use line numbers, favoring differnet ways to tell the computer how to run a program. Because the way programs functions, you can't blame the compiuter when something does wrong as your programs runs. The computer is doing exactly what you told it to do, so the blame for anyh erros usually lies with the programmer. 
+That’s the bad news. The good news is you can’t do any permanent harm. No computers will be injured as you learn to program in Java.
+>>
+--> How Programs Work
+The collection of statements that make up a computer program is called its source code. Most computer programs are written in the same way that you write an email- by typing each statement into a text window. Some programming tools come with their own source code editor and others can be sued with any text-editing software. When you have finished writing a computer program, you save the file to disk. Computer programs often have their own filename extension to indicate what type of file they are. Java
+programs must have the extension .java, as in Calculator.java.
+{NOTE: Computer programs should be prepared as text files with no special formatting. Notepad, a text editor that comes with Windows, saves all files as unformatted text. You also can use TextEdit on Macs or the vi editor or emacs on Linux systems to create text files without formatting. An easier solution is coming up later this hour}.
+To run a program you have saved as a file, you need some help. The kind of help requred depends on the programming language you're using. Some language requre an interpreter to run their programs. The interpreter examise each line of a computer program and executes that line, then proceeds to the next line. Many versions of BASIC are interpreted language. The biggest advantage of interpreted languages is that they are faster to test. When you are writing a BASIC program, you can try it out immediately, fix erros, and try again. The primary disadvantage is that interpreted languages run slower than other programs. Each line has to be translated into insturcions the computer can run, one line at a time. 
+Other programming language require a compiler. The compiler takes a program and translates it into a form that the computer can understand. It also makes the program run as efficiently as possible. The compiled program can be run directly without the need for an interpreter. Compiled programs run more quickly than interpreted programs but take more time to test.  You
+have to write your program and compile the whole thing before trying it out. If you find an error and fix it, you must compile the program again.
+Java is unusual because it requires both a compiler and an interpreter. The compiler converts the statements that make up the program into bytecode. Once this bytecode has been created successfully, it can be run by an interpreter called the Java Virtual Machine.
+The Java Virtual Machine, also called a JVM, is the thing that makes it possible for the same Java program to run without modification on different operating systems and different kinds of computing devices. The virtual machine turns bytecode into instrucions that a particular device's operating systems can execute.
+{NOTE: Java 9 introduces a new tool called JShell that acts like an interpreter, running a Java statement right when it is typed in. JShell works by putting the statement into a Java program, compiling that program into bytecode, and running it. This is a useful tool for learning and testing}
+>>
+--> When Programs Don't Work
+Many new programmers become discouraged when the start to test their programs. Erros appear everywhere. Some of these are syntax errors, which are identified by the computer as it looks at the program and becomes confused by the way a statement has been written. Other errors are logic errors, which only noticed byh the programmer as the program is being tested (or might be overlooked entirely). Logic errors often cause it to do something unintended.
+As you begin writing your own programs, you become well acquainted with errors. They’re a natural part of the process. Programming errors are called bugs, a term that dates back a century or more to describe errors in technical devices. The process of fixing errors also has its own term: debugging. It’s no coincidence that there are so many ways to describe errors. You get a lot of debugging experience as you learn programming—whether you want it or not.
+{NOTE: One of the first computer bugs was discovered in 1947 by a team that included the American computer scientist Grace Hopper. Hopper was testing a computer at Harvard when a relay malfunctioned. The cause wasn’t a software problem—it was an actual bug! A team member debugged the computer by removing a dead moth and taped it into a logbook with the note, “First actual case of bug being found.” The bug and logbook page can be viewed at www.doncio.navy.mil/CHIPS/ArticleDetails.aspx?id=3489.}
+--------------------------
+#Select a Java development tool
+--> Choosing a Java Programming Tool
+To start writing Java programs, you must have a Java programming tool. Several such programs are available for Java, including the simple Java Development Kit and the more sophisticated Eclipse, IntelliJ IDEA, and NetBeans. The latter three tools are each an integrated development
+environment (IDE), a powerful tool used by professional programmers to get work done. Whenever Oracle releases a new version of Java, the first tool that supports it is the Java Development Kit (JDK). 
+To create the programs in this book, you must use JDK version 9 or a programming tool that works on top of it. The JDK is a set of free command-line tools for creating Java software. It lacks a graphical user interface, so if you have never worked in a non-graphical environment such as the Windows command prompt or Linux command-line interface, you will find it challenging to use the JDK.
+The NetBeans IDE, also offered for free by Oracle, is a much easier way to write and test Java code than the JDK. NetBeans includes a graphical user interface, source code editor, user interface designer, and project manager. It works in complement to the JDK, running it behind the scenes, so you must have both tools on your system when you begin developing Java programs.
+Most of the programs in this book were created with NetBeans, which you can download and install separately from the JDK. You can use other Java tools as long as they support JDK 9.
+{NOTE: You don’t have to use NetBeans in this book. If you can use the JDK or another tool to create, compile, and run a program, those tasks are all that most projects require. NetBeans is covered because for readers of past editions it has proven easier than the JDK. I use NetBeans for most of
+my Java programming.}
+In Hour 24, “Writing Android Apps,” you will use the Android Studio IDE. Google, which created Android, recommends that free tool to Java programmers who are creating programs for Android. 
+--------------------------
+>>
+--> Installing a Java Development Tool
+Every hour of this book includes Java programming projects you can undertake to enhance your knowledge of the subject matter while it percolates in your brain. You can’t do any of that percolating if you lack a Java programming tool on your computer. If you already have installed a tool that supports Java, you can use it to develop the tutorial programs in the next 23 hours. However, you already should have some familiarity with how to use the tool. Learning Java and a complex IDE at the same time can be daunting.
+The recommended choice for programming as you read this book is NetBeans, which is free from Oracle’s website at http://netbeans.org. Though NetBeans has advanced features that take time to learn, it makes it easy to create and run simple Java applications. To find out how to download and install NetBeans, read Appendix A, “Using the NetBeans Integrated Development Environment.”
+-----------------------------
+#Get ready to write your first program
+>> Summary
+During this hour, you were introduced to the concept of programming a computer- giving it a set of instructions called statemens that tell it what to do. You also learned why you maed a good call choosing a teach yourself Java instead of another programming language. 
+You also might have downloaded and installed a Java developement tool to use on the programs you create in the hours to come. Ask 10 programmers for the best programming language and you may get 10 answers, complete with “my language can beat up your language” taunts and “your source code is so bloated” jokes. Java scores highly in such arguments because it is widely adopted, extremely versatile, and smartly designed. You can accomplish a lot with this language, and it makes learning others a little easier.
+If you are still confused about programs, programming languages, or Java in general, don’t panic. Everything will begin to make sense in the next hour, “Writing Your First Program,” which gently steps through the process of creating a Java program.
+-------------------------------------
+#WorkShop
+Q: BASIC? C++? Smalltalk? Java? What are the names of these languages supposed to mean?
+A:  BASIC gets its name from an acronym: Beginner’s All-purpose Symbolic Instruction Code. C++ is a programming language that was created to be an improvement on the C language, which itself was an improvement of the B programming language. Smalltalk is an innovative object-oriented language developed in the 1970s that had numerous ideas adopted by Java.
+Java goes against the tradition of naming a language with an acronym or other meaningful term. It’s just the name that Java’s developers liked the best, beating out WebRunner, Silk, Ruby, and others. (The Ruby programming language didn’t exist back then.) When I create my own programming language, it will be named Salsa. Everybody loves salsa.
+>>
+Q: Why are interpreted languages slower than compiled ones?
+A: They’re slower for the same reason that a person interpreting a live speech in a foreign language is slower than a translator interpreting a printed speech. The live interpreter has to thin about each statement that's being made as it happens, while the other interpreter can work on the speech as a whole take shortcuts to speed up the process. Compiler languages can be much faster than interpreter languages ebcause theyh do things to make the program run more efficiently.
+>>
+Q: Do you only answer questions about Java?
+A: Not at all. Ask me anything.
+>>
+Q: Okay, what is the lowest score ever given on Dancing with the Stars?
+A: The worst dance by a celebrity contestant on the hit ABC TV show in the United States was performed by the rapper Master P during the second season in 2006. His paso doble with professional dancer Ashly DelGrosso scored a lowest-ever 8. Judges Len Goodman and Bruno Tonioli scored it a 2 and judge Carrie Ann Inaba a 4.
+Tonioli’s take: “It was a nightmare. You looked like a child on the mall looking for his mother.”
+Goodman: “I know viewers think they’re being kind by bringing you back. They’re not. They’re being cruel—to Ashly, to the judges.”
+Inaba: “I actually thought that that was your best dancing.”
+Master P only trained 20 hours for the show, compared to 130 for the other contestants at that point in the season. He also refused to wear dancing shoes and performed in basketball sneakers. The dance was his last before being voted off. The dance can be seen on YouTube, where one commenter writes, “Thumbs up if you’re watching this just to see the 2 paddle.”
+On Dancing with the Stars internationally, reality TV star Farmer Dave Graham got the lowest possible score—a 1 from all four judges for a total of 4—in Australia in 2007. He shared the performance on his YouTube account, writing, “Perhaps not the best claim to fame, but you take your world records where you can.”
+==========================================================
+==========================================================
+==========================================================
+HOUR 2: WRITING YOUR FIRST PROGRAM
+As you learned during Hour 1, “Becoming a Programmer,” a computer program is a set of instructions that tells a computer using a programming language. During this hour, you create your first Java program by entering it into a text editor. When that’s done, you save the program, compile it, and test it out. Then you break it on purpose and fix it again, just to show off.
+---------------------
+#Type a Java program into a text editor
+>>
+--> What you Need to Write Programs
+As explained in Hour 1, to create Java programs, you must have a programming tool that supports the Java Development Kit (JDK) such as the NetBeans integrated development environment (IDE). You need a tool that can compile and run Java programs and a text editor to write those programs.
+With most programming languages, computer programs are written by entering text into a text editor (also called a source code editor). Some programming languages come with their own editor. NetBeans includes its own editor for writing Java programs.
+Java programs are plain text files without any special formatting, such as centered text or boldface text. The NetBeans source code editor functions like a simple text editor with some useful enhancements for programmers. Text turns different coloers as you type to identify different elements of the language. NetBeans also indents lines properly and provides and provides helpful programming documentation inside the editor. Because Java programs are text files, you can open and edit them with any text editor. You could
+write a Java program with NetBeans, open it in Windows Notepad and make changes, and open it again later in NetBeans without any problems.
+>>
+--> Creating the Saluton Program
+The first Java program that you create will display will display  a traditional greeting from the world of computer science: “Saluton mondo!”.
+To prepare for the first programming project in NetBeans, if you haven’t already done so, create a new project called Java24 by following these steps:
+1. 
+--> Beginning the Program
+Make sure to capitalize everything exactly as shown, and use your spacebar or Tab key to insert the blank spaces in front of Lines 4–6. When you’re done, choose File, Save to save the file.
+At this point, Saluton.java contains the bare bones of a Java program. You will create many programs that start exactly like this one, except for the word Saluton on Line 3. This word represents the name of your program and changes with each program you write. Line 5 should make sense to you, because it’s a sentence in actual English. The rest is probably new to you.
+>>
+--> The Class Statement
+The first line of the program is the following:
+[ package id.jayalearn; ]
+A package is a way to group Java programs together. This line tells the computer to make id.jayalearn the package of the program.
+After blank line, the third line is this:
+[ class YourCLass { ]
+Translated into English, it means, "Computer, give my Java programs the name Saluton.". As you might recall from Hour 1, each instruction you give a computer is called a statement. The class statement is the way you give your computer program a name. It's also to determine other things about the program, as you will see later. The significance of the term class is that Java programs also are called classes. In this example, the program name Saluton matches the document’s filename, Saluton.java. A Java program must have a name that matches the first part of its filename—the portion
+before the “.” period character—and should be capitalized the same way.
+If the program name doesn't match the filename, you get an error when you try to compile some Java programs, depending on how the class statement is being used to configure the program.
+>>
+--> What the main Statement Does
+The next line of the program is the following:
+[ public static void main(String[] arguments){} ]
+This line tells the computer, "The main part of the program begins here." Java programs are organized into different sections, so there needs to be a way to identify the part of a program that is executed first when the program is run. The main statement is the entry point to most Java programs. The exceptions are applets, programs that are run on a web page by a web browser, servlets, programs run by a web server, and apps, programs run by a mobile device. Most programs you write during upcoming hours of this book use main as their starting point. That's because you run them directly on your compiter. Applets, apps, and servlets are run indirectly by another program or device. To differentiate them from these other types, the programs that you run directly are called applications.
+---------------------
+#Organize a program with bracket marks
+>>
+--> Those Squiggly Bracket Marks
+In the Salution program. Lines 3,4,6, and 7 contain a squiggly bracket mark of some kind either a (or a). These brackets are a wayht to goup lines of your program (in the same way that parentheses are used in a sentence to group words). Everything between the opening bracket (and the closing bracket) is a part of the same group. These groupings are called blocks. In Listing 2.1, the opening bracket on Line 3 is associated with the closing bracket on Line 7, which makes your entire program a block. You use brackets in this way to show the beginning and end of a program. Blocks can be located  inside other blocks (just as parentheses are used in this sentence (and a second set is used here)). The Saluton program has brackets on Line 4 and Line 6 that establish another block. This block begins with the main statement. The lines inside the main statement’s block will be run when the program begins.
+The following statement is the only thing located inside the block:
+// My first Java program goes here
+This line is a placeholder. The // at the beginning of the line tells the computer to ignore this line because it was put in the program solely for the benefit of humans who are looking at the source code. Lines that serve this purpose are called comments.
+Right now, you have written a complete Java program. It can be compiled, but if you run it, nothing happens. The reason is that you haven’t told the computer to do anything yet. The main statement block contains only a single comment, which is ignored by the computer. You must add some statements inside the opening and closing brackets of the main block.
+---------------------
+#Store information in a variable
+In the programs you write, you need a place to store information for a brief period of time. You can do thisk by using a variable, a storage place that can hold information such as integers, floating-point numbers, true-false values, characters, and lines of text. The information stored in a variable can change, which is how it gets the name variable. In  Saluton.java file, replace Line 5 with the following:
+[ String greeting = "Saluton mondo!"; ]
+This statement tells the computer to store the text "Solution mondo" in a variable called greeting.
+In Java program, you must tell the computer what type of information a variable wil hold. IN this program, greeting is a string- a line of text that can include letters, numbers, punctuation, and other characters. Putting String in the statement sets up the variable to hold string values. When you enter this statement into the program, a semicolon must be inlcuded at the end of the line. Semicolons end each statement in a Java program. Theyr'e like the period at the end of a sentence. The computer uses them to determine when one statement ends and the next one begins. Putting only one statement on each line makes a program more understandable (for use humans).
+---------------------
+#Display the information stored in a variable
+If you run the program at this point, it still seems like nothing happens. The command to store text in the greeting variable occurs behind the scenes. To make the computer show that it s doing something, you can display the contents of that variable. Insert another blank line in the Saluton program after the String greeting = "Saluton mondo!" statement. Use that empty space to enter the following statement:
+[ System.out.println(greeting); ]
+This statement tells the computer to display the value stored in the greeting variable. The System.out.println statement makes the computer display information on the system output device—your monitor. Now you’re getting somewhere.
+---------------------
+#Save, compile and run a program
+Your program should now resemble Listing 2.2, although you might have used slightly different spacing in Lines 5–6. Make any corrections that are needed and save the file (by choosing File, Save).
+>>Listing 2.2: The Finished Version of the Saluton Program
+[package com.java24hours;
+ 
+  class Saluton {
+    public static void main(String[] arguments) {
+      String greeting = "Saluton mondo!";
+      System.out.println(greeting);
+    }
+  } ]
+When the computer runs this program, it executes each of the statements in the main statemen block on lInes 5 and 6. Listing 2.3 shows what the program would look like if it was written in the English language instead of Java.
+>>Listing 2.3: A Line-by-Line Breakdown of the Saluton Program
+1. Put this program in the id.jayalearn package.
+2. 
+3. The Saluton program begins here:
+4. 	The main part of the program begins here:
+5. 		Store the text "Solution Mondo" in a String variable named greeting
+6.		Display the contents of the variable greeting
+7.	The main part of the program ends here
+8. The Saluton program ends here.
+Listing 2.4. shows what the program would look like if written in Klingon, the language of the warrior race from Star Trek.
+>>Listing 2.4: The Saluton Program in Klingon
+1: This program belongs to the house of id.jayalearn
+2. 
+3: Begin the Saluton program here if you know what's good for you
+4: 	The main part of the program begins here with honor!
+5: 		Store the gibberis "Saluton mondo!" in a String variable called greeting!
+6: 		Display this gibberish from a tongue inferior to Klingon!
+7: 	End the main part of the program here to avoid myh wrath!
+8: End the Saluton program now and be grateful you were spared!
+>>
+--> Compiling the Program into a Class File
+Before you can runa Java program, you must compile it. When you compile a program, the instructions given to the computer in the program are converted into a form the computer can better understand. NetBeans compiles programs automatically as they are saved. If you typed everything as shown in Listing 2.2, the program compiles successfully.
+A compiled version of the program, a new file called Saluton.class, is created. All Java programs are compiled into class files,which are given the file extension .class. A Java program can be made up of several classes that work together, but in a simple program such as Saluton only one class is needed. The compiler turns Java source code into bytecode, a form that can be run by the Java Virtual Machine (JVM).
+{NOTE: The Java compiler speaks up only when there’s an error to complain about. If you compile a program successfully without any errors, nothing happens in response. This is admittedly a bit anticlimactic. When I was starting out as a Java programmer, I was hoping successful compilation would be met with a grand flourish of celebratory horns.}
+>>
+-->  Fixing Errors
+As you compose a program in the NetBeans source editor, errors are flagged with a red alert icon to the left of the editor pane, as shown in Figure 2.2.
+The icon appears on the line that triggered the error. You can click this icon to display an error dialog that explains the compiler error with these details:
+ u The name of the Java program
+ u The type of error
+ u The line where the error was found
+Here’s an example of an error dialog you might see when compiling the Saluton program:
+[cannot find symbol.
+symbol : variable greting
+location: class Saluton]
+The error message is the first line of the dialog: "cannot find symbol." These messages often can be confusing to new programmers. When the error message doesn't make sense to you, don't spend much time trying to igure it ous. Instead, look at the line where the error occured and check for the most obvious causes. For instance, can you determine what's wrong with the following statement?
+[ System.out.pringln(greting); ] ==> this is error
+The error is a typo in the variable name, which should be greeting instead of greting. (Add this typo on purpose in NetBeans to see what happens). If you get error dialogs when creating the Saluton program, double-check that your program matches Listing 2.2 and correct any differences you find. Make sure that everything is capitalized correctly and all punctuation marks such as[,] and; are included. Often, a close look at the line identified by the error is enough to reveal the error (or errors) that need to be fixed.]
+>>
+--> Running a Java Program
+To see whether the Saluton program does what you want, run the class with the Java interpreter. In NetBeans, choose the menu command Run, Run File. An Output pane opens below the source code editor. In this pane, if there are no errors, the program displays the output, as shown in Figure 2.3.
+If you see the text “Saluton Mondo!” you have just written your first working Java program! Your computer has just greeted the world—a tradition in the computer programming field that’s as important to many of us as energy drinks, short-sleeved dress shirts, and League of Legends. You might be asking yourself why “Saluton mondo!” is a traditional greeting. The phrase means “Hello world!” in Esperanto, an artificial language created by Ludwig Zamenhof in 1887 to facilitate international communication. It’s only a traditional greeting in the sense that I’m trying to start that tradition.
+{TIP: Oracle offers comprehensive documentation for the Java language on the Web. You don’t need it to read this book, because each topic is discussed fully as it is introduced, but this reference comes in handy when you want to expand your knowledge and write your own programs.
+The documentation can be downloaded, but it’s more convenient to browse as needed on Oracle’s website. The most up-to-date Java documentation is available at http://download.java.net/jdk9/docs/api.}
+>>
+--> Summary
+During this hour, you got your first chance to create a Java program. You learned that in order to develop a Java program, you need to complete these four basic steps:
+ 1. Write the program with a text editor or a tool such as NetBeans.
+ 2. Compile the program into a class file.
+ 3. Tell the Java Virtual Machine to run the class.
+ 4. Call your mother.
+Along the way, you were introduced to some basic computer programming concepts such as compilers, interpreters, blocks, statements, and variables. These will become clearer to you in successive hours. As long as you got the Saluton program to work during this hour, you’re ready to proceed. (The fourth step has nothing to do with Java programming. It’s just something my mother suggested I put in the book.)
+>>
+#WorkShop
+Q: How important is it to put the right number of blank spaces on a line in a Java program?
+A:  It’s completely unimportant as far as the computer is concerned. Spacing is strictly for the benefit of people looking at a computer program—the Java compiler couldn’t care less. You could have written the Saluton program without including blank spaces or using the Tab key to indent lines, and it would compile successfully.
+Although the number of spaces in front of lines isn’t important to the computer, you should use consistent spacing and indentation in your Java programs anyway. Why? Because spacing makes it easier for you to see how a program is organized and to which programming block a statement belongs.
+The programs you write must be understandable to other programmers, including yourself when you look at the code weeks or months later to fix a bug or make an enhancement. Consistency in spacing and indentation are part of what’s called a programming style. Good programmers adopt a style and practice it in all their work.
+
+Q: A Java program has been described as a class and as a group of classes. Which is it?
+A: Both. The simple Java programs you create during the next view hours are compiled into a single file with the extention .class. You can run these with the JVM. Java programs also can be made up of a set of classes that work together. This topic is fully explored during Hour 10. Creating Your First Object.
+
+Q:  If semicolons are needed at the end of each statement, why does the comment line // My first Java program goes here not end with a semicolon?
+A: Comments are completely ignored by the compiler. If you put // on a line in your program, this tells the Java compiler to ignore everything to the right of the // on that line. The following example shows a comment on the same line as a statement:
+[ System.out.println(greeting); // hello, world!]
+
+Q: I couldn't find any errors in the line where the compiler noted an error. What can I do?
+A: The line number displayed with the error message isn’t always the place where an error needs to be fixed. Examine the statements that are directly above the error message to see whether you can spot any typos or other bugs. The error usually is within the same programming block.
+
+Q: How can I visit Antarctica?
+A:  If you’re not willing to become a scientific researcher or a support staffer such as a cook, electrician, or doctor, you can become one of the 10,000 people who visit the frozen continent annually as tourists.
+Flyovers are available from Australia, New Zealand, and South America and cost around $1,000 per person.
+Several cruise ships visit for a trip lasting from 10 days to three weeks, the most expensive of which is around $25,000. Some cruises offer a chance to kayak or hike among penguins, visit icebergs, and even camp overnight.
+The Polar Cruises website at www.polarcruises.com provides more information for prospective Antarctica visitors. The British Antarctic Survey offers a piece of advice for visitors: “Do not walk onto glaciers or large snowfields unless properly trained.”
+
+---------------------
+HOUR 3: VACATIONING IN JAVA
+Before you venture further into Java programming, it’s worthwhile to learn more about the language and see what programmers are doing with it today. Though Java has long outgrown its origins as a language focused on web browser programs, you can find millions of examples of how Java is used in mobile apps. During this hour, we look at sites that feature Java programs, apps written in the language, and the history and development of the language. To go on this vacation, you need a phone or tablet that runs Java programs.
+Power up your device of choice, put on your best batik shirt, and get ready to take a vacation. You won’t be leaving your house, and you won’t experience the simpler pleasures of tourism, such as exotic locales, exotic locals, exotic food, exotic locals with food, and so on. Look on the bright side though: no traveler’s check hassles, no passports, and no worries about
+the water.
+Figure 3.1 shows Celtic Heroes, a massively multiplayer online game powered by Java on Android. You can play the game for free by installing the app on Google Play or your device’s app store. When you run it, the game loads within seconds and you can create a character and explore a fantasy world.
+Oracle’s Java division leads the development of the Java language. Java Magazine, an online magazine available for free from Oracle at Java.com, showcases how Java is being used on Android phones, websites, and other platforms. Billions of devices run programs written with Java.
+Oracle also offers a more technically oriented website for Java programmers at www.oracle.com/ technetwork/java. This site is the place to find the latest released versions of NetBeans and the Java Development Kit along with other programming resources.
+This trip around Java begins in Android because that has become the most thriving place for the language to be used. After you learn Java, you can apply your skills developing your own apps using the Android Software Development Kit (SDK), a free programming toolkit that runs on Windows, Mac OS, and Linux. More than 300,000 apps have been created for Android phones and other devices that run the mobile operating system. You learn more about how to create them in Hour 24, “Writing Android Apps.”
+--------------------------------
+#Discover the History of Jav
+>>
+--> A Brief History of Java
+Bill Joy, one of the executives at Sun Microsystems when the company created Java, called the language “the end result of 15 years of work to produce a better, more reliable way to write computer programs.” Java’s creation was a little more complicated than that.
+Java was developed in 1990 by James Gosling as a language that would serve as the brains for smart appliances (interactive TVs, omniscient ovens, time-traveling Terminators, SkyNet military satellites that enslave mankind, and so on). Gosling was unhappy with the results he was getting by writing programs with a programming language called C++. In a burst of inspiration,
+he holed up in his office and wrote a new language to better suit his needs.
+Gosling named his new language Oak after a tree he could see from his office window. The language was part of his company’s strategy to make a fortune when interactive TV became a multimillion-dollar industry. That still hasn’t happened today (though Amazon, Apple, Roku, and others are making a game attempt), but something completely different took place for Gosling’s new language. Just as Oak was about to be scrapped, the Web became popular.
+In a fortuitous circumstance, many qualities that made Gosling’s language good on its appliance project made it suitable for adaptation to the Web. His team devised a way for programs to be run safely from web ppages, and a catchy new name was chosen to accompany the language’s new purpose: Java.
+{NOTE: You might have heard that Java is an acronym that stands for Just Another Vague Acronym. You also might have heard that it was named for Gosling’s love of coffee.
+The story behind Java’s naming contains no secret messages or declarations of liquid love. Java was chosen as the name for the same reason that the comedian Jerry Seinfeld likes to say the word salsa: It just sounds cool.}
+Although Java can be used for many other things, the Web provided the original showcase it needed to seize the attention of the world’s software developers. When the language rose to prominence, you had to be in solitary confinement or a long-term orbital mission to avoid hearing about it.
+There have been 10 major releases of the Java language, each with some essential new features. Here are the first nine:
+ u Java 1.0—The original release (1995)
+ u Java 1.1—Java Database Connectivity (JDBC), improved graphical user interfaces (1997)
+ u Java 2 version 1.2—Inner classes, the Java Plug-in for web browsers, and data
+ structures (1998)
+ u Java 2 version 1.3—Enhanced multimedia (2000)
+ u Java 2 version 1.4—Improved Internet support, XML processing, and assertions (2002)
+ u Java 5—Generics, new for loops, annotations, and automatic data conversion (2005)
+ u Java 6—The built-in Derby database and web services (2006)
+ u Java 7—Memory and resource management improvements and the Nimbus graphical
+user interface (2011)
+ u Java 8—Closures (2014)
+The current release, Java 9, came out in 2017. Three years in the making, this new version introduces improvements to interfaces and closures, an advanced feature you learn about during Hour 16, “Using Inner Classes and Closures.” There’s also an HTTP client for receiving and sending data over the Web, as covered in Hour 21, “Using Java 9’s New HTTP Client.”
+If you don’t know what all these things are—such as inner classes, generics, or HTTP—don’t freak out. You’ll learn about them over the next 21 hours.
+{NOTE: Are you wondering why Java’s versions are numbered so strangely, skipping from 2 to 6, calling the
+seventh version Java 6, and including an integer and decimal number in some versions? Me, too!
+Java’s major domos made some odd decisions along the way as new versions were released. Fortunately, the numbering scheme has made more sense since 2006, with each new release an integer one higher than the last.}
+>>
+--> Going to School with Java
+The Web includes numerous resources for educators and schoolchildren. Because Java apps can offer a more interactive experience than web pages, the language is a natural choice for programs that enhance learning.
+For one such example, install the FreeBalls app to access a free particle motion simulator created by Ivan Maklyakov, a computer programmer in Russia. The program uses Java to demonstrate physics-based animation of thousands of particles made out of a solid or liquid. The motion is controlled by tilting the screen. Figure 3.2 shows the colorful result.
+Numerous educational programs are available for many operating systems, but one thing that makes this program stand out is its availability. The simulator can run on any Android device. You can run Java programs on any computer that has a Java Virtual Machine (JVM).
+The JVM loaded by a mobile device or web browser is the same you used to run the Saluton application during Hour 2, “Writing Your First Program.” A Java program, such as the physics simulator, does not have to be written for a specific operating system. Because operating systems like Windows also are called platforms, this advantage is called platform independence. Java was created to work on multiple systems. Java’s developers believed it needed to be multiplatform because it would be used on a variety of appliances and other electronic devices. 
+Users can run the programs you write with Java on a variety of systems without requiring any extra work from you. Under the right circumstances, Java can remove the need to create specific versions of a program for different operating systems and devices.
+>>
+--> Lunch at Food Network
+After working up an appetite on our first two stops, take a lunch break with Food Network in the Kitchen, a free Java app created by the gustatory television channel.
+For each of the star chefs on the channel, Food Network in the Kitchen offers recipes, cooking notes, user comments, and videos. One of the advantages of the app format is that it can include interactive features in conjunction with articles. Figure 3.3 shows Giada de Laurentiis’s recipe
+for pan-seared branzino that accompanies a video tutorial explaining how it was prepared. Remember to use your fish spatula!
+An app store like the one where Food Network in the Kitchen was found contains thousands of programs for users to try. Because these programs come from many developers, safeguards must be in place to protect users and their devices. One issue that has been hotly debated since Java’s introduction is whether the language is secure. Security is important because of the way Java programs work when they are delivered as apps. The apps you try during this hour are downloaded to your phone or tablet. When the program is
+finished downloading, it can be run.
+Unless you know a whole lot of people, most apps you use are published by strangers. In terms of security, running their programs isn’t a lot different than letting the general public come over and borrow your computer. If the Java language did not have safeguards to prevent abuse, its programs could introduce viruses onto your system, delete files, play the spoken-word song performances of William Shatner, and do other unspeakable things. Java includes several kinds of security to make sure that its programs are safe when run from apps or web pages.
+The language generally has been considered safe enough to be usable over the Web, but security holes exploited in recent years have led some security experts to recommend that users turn off Java entirely in their browsers. Most of the leading browsers today discourage users from running Java applets on websites. Java is more commonly encountered by users on mobile apps, server programs, and desktop software. That’s why this hour is being spent running apps instead of applets.
+>>
+--> Watching the Skies at NASA
+The first afternoon stop on the Java tour is a trip to space. NASA is a U.S. government agency that makes extensive use of Java. One example is ISS Detector, a free app from the developer RunaR that helps stargazers keep an eye out for the International Space Station and several orbiting satellites. ISS Detector superimposes the current location and path of the ISS and satellites—over the night sky. In Figure 3.4, the app shows the Iridium 96 satellite (GALEX) making a path through the Eastern sky past Venus and Uranus beginning at 1:43 a.m.
+The app redraws the position of each tracked satellite as it runs and changes the orientation of the sky map based on the direction the user is facing. This kind of real-time update is possible because the Java language is multithreaded. Multithreading is a way for the computer to do more than one thing at the same time. One part of a program takes care of one task, another part takes care of a different task, and the two parts can pay no attention to each other. Each part of a program in this example is called a thread. In a program such as ISS Detector, each satellite could run in its own thread. If you use an operating system such as Windows 10, you’re using a type of this behavior when you run more than one program at the same time. If you’re at work playing Minecraft in one window while running a company sales report in another window and making a long-distance call to a friend,
+congratulate yourself—you’re multithreading!
+>>
+--> Getting Down to Business
+At this point in your travels, you might have the impression that Java is primarily of use to space buffs, amateur chefs, and elven warriors. The next stop on our trip shows an example of Java getting down to business. Install the Realtime Stock Quotes Java app from uInvest Studio which displays updated stock prices for a user’s holdings. Figure 3.5 shows the current data for ticker symbol GOOG (Google’s parent company Alphabet Inc.). 
+You can think of a program like this stock ticker app in several ways. One is to think of a program as an object—something that exists in the world, takes up space, and has certain things it can do. Object-oriented programming (OOP), which Java uses, as you discover in Hour 10, “Creating Your First Object,” is a way of creating computer programs as a group of objects. Each object handles a specific job and knows how to speak to other objects. For example, a stock ticker program could be set up as the following group of objects:
+ u A quote object, which represents an individual stock quote
+ u A portfolio object, which holds a set of quotes for specific stocks
+ u A ticker object, which displays a portfolio
+ u An Internet object, a user object, and many others
+Under that model, the stock ticker software is a collection of all the objects necessary to get work done. OOP is a powerful way to crate programs, and it makes  the programs you write more useful. COnsider the stock software. If the programmer wants to use the quote capabilities of that program with some other software, the quote object can be used with the new program. No changes need to be made. Programs created with object are easier to mainatin because they are better organized. An object contains the data necessary to do its job and the code required to do that work. Objects also make a program more extensible. A new object can be patterned after an existing one and enhanced with new capabilities.
+>>
+--> Stopping by SourceForge for Directions
+This world tour of Java programs is being led by a professional who is well versed in the hazards and highlights of app-based travel. You’ll be venturing out on your own trips soon, so it’s worthwhile to learn the lay of the land at an incredibly useful site for programmers: SourceForge, one of the best places to find complete examples of working programs written with Java (or any other language). Find it at www.sourceforge.net.
+SourceForge is an enormous website devoted to collaborative programming projects. If you have an interest in working with others on a program you are developing, you can start a project on SourceForge, share all its files, recruit others, and communicate with them. The 430,000-plus projects on the site all are open source, which means that the programmers have shared all the source code. In case you’re unfamiliar with the term, source code is another name for the text files that are used to create computer programs. The Saluton.java file you developed during Hour 2 is an example of source code. If you use the search box atop the SourceForge home page to search for Java, you’ll find more than 61,000 listings in the site’s directory of projects.
+n 61,000 listings in the site’s directory of projects.
+One of the programs on SourceForge is JSoko, a Java version of the Japanese warehouse keeper game Sokoban (see Figure 3.6). The puzzle game features animation, graphics, keyboard control, and sound. To download the application and view its Java source code, visit https://sourceforge.
+net/projects/jsokoapplet to download the source code.
+Java includes an enormous library of classes you can use in your own programs. JSoko employs the library's Image class (in Java.awt) to display graphics such as boxes and its AudioINputStream class (in javax.sound.sampled) to play sounds as the truck moves and boxes are placed. One reason som many programs are created with Java—on SourceForge and elsewhere—is because the language was designed to be easier to learn despite its powerful functionality.
+An original design goal for the language was to make it quicker to master than C++, the language Gosling was having fits with on his smart-appliance project back in the 1990s. Much of Java is based on C++, so programmers who have learned to use that language find it easier to learn Java. However, some of the elements of C++ that are the hardest to learn and use correctly
+are not present in Java.
+For people learning programming for the first time, Java is easier to learn than C++. Some languages are created to make it easier for experienced programmers to harness the capabilities of the computer in their programs. These languages include shortcuts and other features that programming veterans easily understand.
+Java does not use some of these features, preferring to make the language as simple as an objectoriented programming language can be. Java was created to be easy to learn, easy to debug, and easy to use. Java includes numerous enhancements that make it a worthy competitor to other languages.
+>>
+--> Summary
+Now that the hour-long vacation is over, it’s time to put away your luggage and get ready for a return to actual Java programming.
+During the next 21 hours, you will master the basic building blocks of the Java language, learn how to create your own objects to accomplish tasks in object-oriented programming, design graphical user interfaces, and much more. Unless you stopped reading this book to play Celtic Heroes.
+>>
+--> Workshop
+Q: Why are Java applets no longer popular?
+A:  When the Java language was introduced in the mid-1990s, most people were learning the language to write applets. Java was the only way to create interactive programs that ran in a web browser. Over the years, alternatives emerged. Macromedia Flash, Microsoft Silverlight, and the new web publishing HTML5 standard all offer ways to put programs on web pages. Applets were hampered by poor loading times, slow support for new versions of Java by
+browser developers, and security holes exploited by hackers. Though applets are disappearing from the web, Java has outgrown its origins as a web browser enhancement and is now a sophisticated general-purpose programming language.
+
+Q: What’s the difference between Java SE (Java Standard Edition) and Java EE (Java Enterprise Edition)? Does Java EE cost money?
+A: Java EE is an expansion of the Java Standard Edition that includes packages to support advanced technology such as Enterpise JavaBeans, XML processing, and the development of servlets- Java programs that run on a web server. Java EE also includes an applications server, a sophiscated environment for executing Java software that's tailored for corporations and other large organizations with heavy computing needs. The Java EE
+development kit can be downloaded at no cost from Oracle at www.oracle.com/technetwork/java/javaee.
+
+Q: What’s a Chris Steak House, and why does Ruth have one?
+A: Ruth’s Chris Steak House, the chain of more than 130 upscale steak restaurants across the United States and a handful of other countries, has an odd two-first-name name tha reveals its humble origins and the stubborn streak of its founder.
+ The chain was founded in 1965 as a solitary New Orleans restaurant owned by Ruth Fertel, a single mother of two sons. Fertel saw a classified ad offering a restaurant for sale and took out a $22,000 home mortgage to buy it (equivalent to around $150,000 in present
+dollars).
+ She reached a deal to keep the name Chris Steak House with original owner Chris Matulich, but later had to relocate after a kitchen fire.
+ Fertel’s contract did not permit her to use the Chris Steak House name anywhere but the original location, so she renamed it Ruth’s Chris Steak House. Though she had no restaurant or culinary expertise, the business was so successful that she began offering it as a
+franchise within 12 years. She disregarded several suggestions over the years to change the name to broaden its appeal.
+ “I’ve always hated the name,” she once told a reporter for Fortune magazine, “but we’ve always managed to work around it.”
+ Fertel, who died in 2002, was born on February 5, 1927—the same day that Matulich opened the original steakhouse.
+--------------------------------
+#Learn the Benefits of Using the Language
+--------------------------------
+#See examples of Java at work
+==============================================================
+==============================================================
+==============================================================
+HOUR 4: UNDERSTANDING HOW JAVA PROGRAMS WORK
+An important distinction to make in Java programming is where your program is supposed to be running. Some programs are intended to work on your computer. Other programs are intended to run on a phone or tablet.
+Java programs that run locally on your own computer are called applications, programs that are run by web servers are called servlets, and programs that run on mobile devices are called apps.
+During this hour, you will create an application and run it on your computer.
+------------------------
+#Learn how applications work
+>>
+--> The Saluton program you wrote during Hour 2, "Writing your First Program", is an exmaple of a Java Application. The next application you create calculates the square root of a number and displays the value.
+With the Java24 project open in NetBeans, begin a new application:
+ 1. Choose File, New File. The New File Wizard opens.
+ 2. Choose the category Java and the file type Empty Java File and then click Next.
+ 3. Enter the class name Root.
+ 4. Enter the package name com.java24hours.
+ 5. Click Finish.
+NetBeans creates Root.java and opens the empty file in the source editor so you can begin working on it. Enter everything from Listing 4.1, remembering not to enter the line numbers and colons along the left side of the listing. The numbers are used to make parts of programs easier to describe in the book. When you’re done, save the file by clicking the Save All button on the
+toolbar.
+>>Listing 4.1: The full Text of Root.java
+[package com.java24hours;
+ 
+ class Root {
+   public static void main(String[] arguments) {
+     int number = 225;
+     System.out.println("The square root of "
+       + number
+       + " is "
+       + Math.sqrt(number)
+    );
+  }
+}]
+The Root application accomplishes the following tasks:
+ u Line 1—The application is placed in the com.java24hours package.
+ u Line 5—An integer value of 225 is stored in a variable named number.
+ u Lines 6–10—This integer and its square root are displayed. The Math.sqrt(number)
+statement in Line 9 displays the square root.
+If you have entered Listing 4.1 without any typos, including all punctuation and every word capitalized as shown, you can run the file in NetBeans by choosing Run, Run File. The output of the program appears in the Output pane, as shown in Figure 4.1.
+When you run Java Applicatoin, the JVM looks for a main() block and starts handling Java statements within that block. If your program does not have a main() block, the JVM responds with an error. 
+The statement Math.sqrt(number) in line 9 demonstrates a built-in capability of the Java language- the ability to determine the square root of a number. There is a Java program named Math that has a method called sqrt() to find a specified number's square root. The Math program is part of the Java Class Library, which you explore later this hour.
+------------------------
+#Send Arguments to an Application
+You can run Java applications from a command line using java, a program that invokes the JVM. NetBeans uses this program behind the scenes when you run programs. When a Java program is run as a command, the JVM loads the application. The command can include extra items of information, as in this example:
+[ java TextDisplayer readme.txt /p ]
+Any extra information sent to a program is called an argument. The first argument, if there is one, is provided one space after the name of the application. Each additional argument also is separated by a space. IN the preceding example, the arguments are readme.txt and /p.
+If you want to include a space inside an argument, you must put quotation marks around it, as in the following:
+[ java TextDisplayer readme.txt /p "Page Title" ]
+This example runs the TextDisplayer program with three arguments: readme.txt, /p, and "Page Title". The quotation marks prevent Page and Title from being treated as separate arguments. You can send as many arguments as you want to a Java application (within person). To do something with them, you must write statements in the application to handle them.
+To see how arguments work in application, create a new class in the Java24 project.
+1. Choose File, New File.
+2. In the New File Wizard, choose the category Java and file type Empty Java File.
+3. Give the class the name BlankFiller, the package com.java24hours, and 
+click Finish.
+Enter the  text of Listing 4.2 in the source code editor and save it when you’re done. Compile the program, correcting any errors that are flagged by the editor as you type. 
+>>Listing 4.2: The Full Text of BlankFiller.java
+[package id.jayalearn;
+
+class BlankFiller{
+  public static void main(String[] args){
+    System.out.println("The " +arguments[0]
+      + " " + arguments[1] + " fox"
+      + "jumped over the "
+      + arguments[2] + " dog."
+    );
+  }
+}]
+This application compiles successfully and can be run, but if you try it with the menu command Run, Run File, you get a complicated-looking error:
+Output:
+[ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+ at BlankFiller.main(BlankFiller.java:5) ]
+This error occurs because the program expects to receive three arguments when it is run. You can specify arguments by customizing the project in NetBeans:
+ 1. Choose the menu command Run, Set Project Configuration, Customize. The Project
+Properties dialog opens.
+ 2. Enter com.java24hours.BlankFiller in the Main Class text field.
+ 3. In the Arguments field, enter retromingent purple lactose-intolerant and
+click OK.
+Because you’ve customized the project, you must run it a little differently. Choose the menu command Run, Run Main Project. The application uses the arguments you specified as adjectives to fill out a sentence, as shown in Figure 4.2.
+Return to the Project Properties dialog and designate three adjectives of your own choosing as arguments, making sure to always include at leas three. Arguments are a simple way to customize the behavior of a program. The arguments are stored in a atype of a variable called and array. You learn about arrays during Hour 9 "Storing Information with Arrays".
+------------------------
+#User the Java Class Library
+This book covers how to use the Java language to create your own programs from scratch. You learn all the keywords and operators that form the language and then put them to work writing statements that make a computer do interesting and useful things. Although this approach is the best way to learn Java, it’s a bit like showing someone how to build a car by making her build every part of the car from scratch first. A lot of work already is done for you as a Java programmer, provided you know where to look for it.
+Java comes with an enormous collection of code you can utilize in your own programs called the Java Class Library. This library is a collection of thousands of classes, many of which can be used in the programs that you write.
+{NOTE: There also are many class libraries provided by other companies and organizations. The Apache Project, the creators of the Apache web server, has more than a dozen Java open source projects. One is Tomcat, a set of classes for creating a web server that can run web applications implemented
+as Java servlets.
+For more information on the project, visit http://tomcat.apache.org. To see all of Apache’s Java projects, visit https://projects.apache.org.}
+The classes can be put to work in your programs in a manner somewhat similar to using a variable. A class is used to create an object, which is like a variable but far more sophisticated. An object can hold data, like a variable does, and also perform tasks, like a program. Oracle offers comprehensive documentation for the Java Class Library on the Web at http://
+download.java.net/jdk9/docs/api. This page is shown in Figure 4.3.
+[GAMBAR]
+Java classes are organized into packages, which sever a similar functions ato a file folder on a computer. The programs you have crated thus far belong the id.jayalearn package. The home page for the documentation is divided into frames. The largest frame lists all of the packages that compoes the Java Class Library, along with a description of each one. The names of the packages help describe their purpose. For intance, java.io is a set of classes for input and output from disk dirves, internet servers, and other data sources; java.time contains classes related to times and dates; and java.util collects helpful utility classes. On the documentation home page, in largest frame is a list of packages with a short description of each one. Click the name of a package to learn more about it. A page loads listing the classes in the package.
+Each class in the Java Class Library has its own page of documentation on this reference site, which consists of more than 22,000 pages. (You don’t have to read all of them now, or ever.)
+For this hour’s final project, you will poke around the library and use an existing Java class to do some work for you. The Dice program uses the Random class in the java.util package, which can be used to create random numbers.
+The first thing you do in the program to use this class is import its package with this statement: [ import java.util.*; ]
+This makes it possible to refer the Random class without using its fullname, which is java.util.Random. Instead, you can simply refer to it as Random. The asterisk makes is possible to refer to all classes in a package by their shorter names. If you only wanted to import Random class, this statement would be used:
+[ import java.util.Randmo; ]
+A Java program can be thought of as an object that performs a task (or tasks). The Random class is a template that can be sued to create a Random object. To create an object, use the new keyword followed by the name of the class parentheses:
+[ Random generator = new Random(); ]
+This createa a variable named generator that holds a new Random object. The object is a random-number generator that can produce random numbers. The tasks an object can do are called methods. For this program, the object's nextInt() method will be employed to produce a random integer value:
+[ int value = generator.nextInt(); ]
+Integers in Java range from −2,147,483,648 to 2,147,483,647. The generator chooses one of these numbers at random and it is assigned to the value variable.
+Without the Random class from teh Java Class Library, you'd have to create your own program to produce random numbers, which is a highly complex task. Random numbers are useful in games, educational programs, and other programs that must do something randomly. In NetBeans, create a new empty Java file, name it Dice, and put it in the package com.java24hours. When the source code editor opens, enter the text of Listing 4.3 into that window
+and then click the Save button (or choose the menu command File, Save)
+>>Listing 4.3: The full Text of Dice.java
+[package id.jayalearn;
+import java.util.*;
+
+class Dice{
+  public static void main(String[] args){
+    Random generator = new Random();
+    int value =  generator.nextInt();
+
+    System.out.println("The random number is "+ value);
+  }
+}]
+------------------------
+#Learn how Java Programs are organized
+You now have a randomly selected integer to call your own. Take good care of it. The Random class, like all classes in the Java Class Library, has extensive documentation you can read on Oracle’s site. It describes the purpose of the class, the package it belongs to, how to create an object of this class, and what methods it has that can be called to make it do
+something.
+Follow these steps to see this documentation:
+ 1. In your web browser, load the page http://download.java.net/jdk9/docs/api.
+ 2. In a navigation bar atop the page at upper left, click the Frames link. The documentation
+opens in several frames.
+ 3. In the Modules frame at upper left, click java.base.
+ 4. In the main frame, scroll down until you see the link to the package java.util. Click this
+link. Documentation for the package is displayed.
+ 5. In the main frame, scroll down and click the Random link.
+As a Java programmer with slightly under four hours’ experience, you likely will find the documentation to be mind-bendingly tough to understand. This is no cause for alarm. It’s written for experienced programmers.
+But as you read this book and become curious about how Java’s built-in classes are being used, you can get some value from looking at the official documentation for a class. One way to use it is to look up the methods in that class, each of which performs a job.
+On the Random documentation, you can scroll down to the explanation for the nextInt() method, which was used on line 8 of Listing 4.3. Figure 4.5 shows this section of the page.
+[GAMBAR]
+{NOTE: All the Java classes this book covers are described within its pages, so the online documentation is not required to progress through these 24 hours and become a Java programmer. Because the classes used in this book have many additional features beyond what an introductory book can cover, the Java Class Library documentation can supplement your learning.}
+------------------------
+#Try Java 9 new JShell Tool
+Java 9 debuts a fun-filled, new tool to make the language easier for beginners to learn. JShell, a command-line program included in the Java Development Kit (JDK), can be used to type in a single Java statement and see what it does.
+JShell is a language shell, an interactive environment that makes it possible to play with Java by entering commands. Each command is a Java statement. Once you hit Enter, the statement is executed by the JVM as if is was part of a complete Java program. To run JShell, in your file system find the folder where you installed the JDK. This folder has a subfolder called bin. Open that folder and double-click jshell. A window opens where you can enter Java code and see what it does. A JShell window is shown in Figure 4.6.
+[GAMBAR]
+JShell commands are typed at the jshell> prompt. In Figure 4.6, a series of three statements
+are entered:
+ 1. System.out.println(Math.sqrt(19600));, which displays the square root of an integer.
+ 2. int x = 100;, which sets the x variable’s value.
+ 3. System.out.println(x);, which displays the square root of x.
+After each command, JShell shows the value produced by that statement. When a variable is created, it stays in memory and can appear in subsequent statements, like how the x integer was used in Figure 4.6.
+The statements in JShell don’t have to end with a semi-colon “;” character, unlike the ones in a full Java program. When you’re ready to exit JShell, use the command /exit. 
+A language shell sucha s JShell also is called a REPL, and acronym that stands for Read-Eval-Print-Loop. The term comes from the Lisp languages, whichn featured an interactive shell beloved by programmers. A REPL is a great hands-on way to experiment with the programming techniques you learn in this book. Take a statement you read about and try creating a similar one to see what it does.
+------------------------
+#Create an object in an application SUMMARY
+During this hour, you had a chance to create a Java program, send arguments to a program, and make use of existing programs in the Java Class Library.
+The next several hours continue to focus on applications as you become more experienced as a ava programmer. Applications are quicker to test because they don’t require you to do any extra work to run them, as you do for the other kinds of programs.
+This hour is the first of several that discuss how to make use of objects and their methods in a Java program. You will return to this subject in Hour 10, “Creating Your First Object.”
+>>
+--> WORKSHOP
+Q: Do all arguments sent to a Java application have to be strings?
+A: Java stores all arguments as strings when an appliactions runs. When you want to use one of these arguments as an integer or some other nonestring type, you have to converst the values. You lear how to do this during Hour 11, "Describing What Your Object is LIke"
+
+Q: Does the line of succession to the British throne run out at some point?
+A:  Under Parliamentary law that has been in place since 1701, the British monarch must be a Protestant descendant of Sophia of Hanover, a German princess who was the heiress to the crown when the law was passed.
+ There are a finite number of people who are descendants of Sophia, so there’s always somebody last in the regal line. The British government lists only the first 38, so genealogists have attempted to fill out the rest of the list themselves.
+ The last person in the line of succession is Karin Vogel, a German pain therapist in her thirties. She was 4,973rd in line as of 2011, genealogists determined after an exhaustive search that took years. So if all the people ahead of her drop out of the running (to, say, spend more time learning Java programming), Vogel takes over the mortgage on Buckingham Palace and becomes Her Majesty Karin the First.
+ Vogel is Sophia’s great-great-great-great-great-great-great-great-granddaughter. She told the Wall Street Journal that becoming monarch would be “too stressful.”
+ With the birth of Prince William and Princess Kate’s son, George, more officially known asHis Royal Highness Prince George Alexander Louis of Cambridge, Vogel dropped to 4,974.
+===========================================================
+===========================================================
+===========================================================
+HOUR 5: STORING AND CHANGING INFORMATION IN A PROGRAM
+In Hour 2, “Writing Your First Program,” you used a variable, a special storage place designed to hold information. The information stored in variables can be changed as a program runs Your first program stored a string of text in a variable. Strings are only one type of information
+that can be stored in variables. They also can hold characters, integers, floating-point numbers, and objects.
+During this hour, you learn more about using variables in your Java programs.
+-------------------------
+#Create a Variable
+>>
+--> Statements and Expressions
+Computer program are a set of instructions that tell the computer what to do. Each instructions is called a statement. The following example from a Java program is s statement:
+[ int highScore = 450000; ]
+You can use brackets to group a set of a statements together in a Java program. These groupings are called block statements. Consider the following portion of a program:
+[
+1: public static void main(String[] arguments) {
+2:   int a = 3;
+3:   int b = 4;
+4:   int c = 8 * 5;
+5: }
+]
+Line 2-4 of this example are in a block statement. The opening bracket on LIne 1 denotes the beginning of the block, and the closing bracket on Line 5 denotes the end of the block. Some statements are called expressions because they involve a mathematical expression and produce a result. Line 4 in the preceding example is an expression because it sets the value of the c variable equal to 8 multiplied by 5. You work with expressions during this hour.
+>>
+--> Assigning Variables Types
+Variables are the main way that a computer remembers something while it runs a program. The Saluton program in Hour 2 used the greeting variable to hold “Saluton mondo!” The computer needed to remember that text so that the message could be displayed later.
+In a Java program, variables are created with a statement that must include two things:
+ u The name of the variable
+ u The type of information the variable will store
+Variables also can include the value of the information being stored.
+To see the different types of variables and how they are created, fire up NetBeans and create a new empty Java file with the class name Variable.
+Start writing the program by entering the following lines:
+[package id.jayalearn;
+
+class Variable{
+  public static void main(String[] args){
+    //coming sson variables
+  }
+}]
+#Integers and Floating-Point Numbers
+So far, the Variable program has a main() block wih only one statement in it- the comment //comming soon; variable. Delete the comment and enter the following statement in its place:
+[ int tops; ]
+This statement createsa variable named tops. It does not specify a value for tops, so for the moment this variable is an empty storage space. The int text at the beginning of the statement designates tops as a variable that is used to store integer numbers. You can use the int type to store most of the non-decimal numbers you need in your computer programs. It can hold any integer ranging from around -2.14 bilion to 2.14 billion. Add a blank line after the int tops statement and enter the following statement:
+[ float gradePointAverage; ]
+This statement creates a variable with the name gradePointAverage. The float text stands for floating-point numbers. Floating-point variables are used to store numbers that might contain a decimal point.
+The float variable type holds decimal numbers of up to 38 figures. The larger double type holds decimal numbers up to 300 figures.
+#Characters and Strings
+Because the variables you have dealt with thus far are numbers, you might have the impression that all variables are used to stroe numbers. Think again. You also can use variables to store text. Two types of the text can be storead as variables: characters and strings. A character is a single letter, number, punctuation mar, or symbol. A string is a group of characters. Your next step in creating the Variable program is to create a char variable and a String variable. Add these two statements after the float gradePointAverage line:\
+[
+char key = 'C';
+String productName = "Larvets";
+]
+As you might have noticed, these two statements use different characters around the text values. When you are using character values in your program, you must put single quotation marks on both sides of the character value being assigned to a variable. For string values, you must surround them with double quotation marks. 
+[ String productName = Larvets; ]
+This statement might look like one telling the computer to create a string variable called productName with the text value of Larvets. However, because there are no quotation marks around the word Larvets, the computer is being told to set the productName value to the same value as a variable named Larvets. (If there is no variable named Larvets, the program
+fails to compile with an error.). After you add the char and String statements, your program should resemble Listing 5.1. Make any necessary changes and save the file.
+[package id.jayalearn;
+
+class Variable{
+  public static void main(String[] args){
+    int tops;
+    float gradePointAverage;
+    char key = 'C';
+    String productName = "Larvets";
+  }
+}]
+The last two variables in the Variable program use the = sign to assign a starting value when the variables are created. You can use this option for any variables you create in a Java rogram, as you discover later in this hour.
+{NOTE: Although the other variable types are all lowercase letters (int, float, and char), the capital letter is required in the word String when creating string variables. A string in a Java program is different from the other types of information you use in variable statements. You learn about this distinction in Hour 6, “Using Strings to Communicate.” }
+This program can be run but produces no output.
+
+--------------------------
+#Use different types of variables
+The other types of variables you have been introduced to so far asre the main ones you will use for most of your Java programming. You can employ a few other types of variables in less common circumstances. One is byte, which holds integer number that range from -128 ton 127. The following statement creates a variable called escapeKey with an initial value of 27:
+[ byte escapeKey = 27; ]
+The second, short, can be used for integers that are smalle rin size than that the int type. A short interger can range from -32,768 to 32,767, as in the following statement:
+[ the roomNumbe = 222; ]
+The last of the numeric variable types, long, is used for integers that are too big for the int type to hold. A long integer can be form -9.22 quintillion to 9.22 quintiollion, which is a large enouth number to cover everything but government spending. When you are working with enormous number in Java, it can be difficult to see at a glance the value of the number, as in this statement:
+[ long salary = 264400000000L ]
+Unless you count the zeros, you probably can't tell that it's $264,4 billion. Java makes it possible to organize large numbers with underscore ('_') characters. Here's an example:
+[ long salary = 264_400_000_000_000L; ]
+The underscores are ignore, sok the variables still equals the same value. They just make numbers more human-readable. The capital 'L' at the end of the number specifies it as a long value. If the 'L' was admitted, the Java compiler would havea ssumed the numbe rwas an int and falged an "integer number too large" error. 
+{CAUTION: If the use of underscores in a number is flagged as an error in the NetBeans source code editor, the IDE has been set up to use an older version of Java. To correct this problem, in the projects pane righ-click  the name of the current project (likely Java24) and choose Properties. The Project Properties dialog opens with Sources chosen in the Categories pane. Check the Source/Binary Format drop-down to make sure it is the current version of Java.}
+>>
+--> The boolean Variable Type
+Java has a type of variable called boolean that can be used only to store the valur tru or the value false. At first glance, a boolean variable might not seem particularly useful unless you plan to write a lot 0fo true-or-false quizzes. However, boolean variables are used in a variety of situations in your programs. The following are some examples of questions that boolean variables can be used to answer:
+--> Has the user pressed a key?
+--> Is the game over?
+--> IS my bank account overdrawn?
+--> Do thes pants make my butt look fat?
+--> Are these the droid I'm looking for?
+Booleans are the place to hold the answer to yes/no and true/false questions. The following statement creates a boolean variable called gameOver:
+[ boolean gameOver = false; ]
+This variable has the starting value of false, so a statement like this could indicate in a gam program that the game isn’t over yet. Later, when something happens to end the game, the gameOver variable can be set to true.
+Although the two possible boolean values look like strings in a program, you should not surround them with quotation marks. Hour 7, “Using Conditional Tests to Make Decisions,” further explores boolean variables.
+{NOTE: Boolena numbers are named for George Boole (1815–1864). Boole, a mathematician who was mostly self-taught until adulthood, invented Boolean algebra, which has become a fundamental part of computer programming, digital electronics, and logic. One imagines that he did pretty well on truefalse tests as a child.}
+>>
+--> Naming Your Variables
+Variable names in Java can begin wit a letter, underscore character "_", or a dollar sign $. The rest of the name can be any letters or numbers. You can give your variables almost any name you like but should be consistent in how you name them. This section outlines the generally recommended naming method for variables. Java is case sensitive when it comes to variable names, so you must always capitalize variable names the same way. For example, if the gameOver variable is referred to as GameOver somewhere in the program, and error prevents the program from being compiled. A variable's name should describe its purpose in some way. The first letter should be lowercase, and if the variable name has more than one word, make the firs tletter of each subsequent word a capital letter. For instance, if you want ot createa an integer variable to store the all-time high score in a game program, you can use the following statement:
+[ int allTimeHighScore; ]
+You can's use punctuation marks or spaces in a variable, so netither of the following works:
+[int all-TimeHig Score;
+int all Time High Score;]
+If you try these variable names in a program, NetBeans responds by flagging the error with the red alert icon alongside the line in the source editor.
+{NOTE: Variable names aren’t the only aspect of Java that’s case sensitive. Everything else you can give a name to in a program, including classes, packages, and methods, must be referred to using consistent capitalization}
+Keywords that are used by the language, such as public, class, true, and false, cannot be used as the names of variables. Java 9 adds another restriction: a variable name cannot be a single underscore _ character. This
+statement used to be permitted in Java:
+[ int _ = 747; ] 
+Try it now, and and error results with the message the '_' is a keyword.
+
+--------------------------
+#Store values in variables
+>>
+--> Storing information in variables
+You can store a value in a variable at the same time that you can create the variable in a Java program. You also can put a value in the variables at any tome later in the program. To set a starting value for a variable upon its creation, use the equal sign (=). Here's an example of creating a double floating-point variable called pi with the starting value of 3.14:
+[ double pi = 3.14; ]
+All variables that store numbers can be set up in similar fashion. If you're setting up a character or a string variable, quotation must be placed around the value as described earlier in this hour. You also can set one variable equal to the value of another variable if they both are of the same type. Consider the following example:
+[int mileage = 300;
+int totalMileage = mileage;]
+First, an integer variable called mileage is created with a starting value of 300. Next, an integer variable called totalMileage is created with the same value as mileage. Both variables have the starting value of 300. In future hours, you learn how to convert one variable’s value to the type of another variable. 
+{CAUTION: If you do not give a variable a starting value, you should give it a value before you use it in another statement. If you don’t, when your program is compiled, you might get an error stating that the variable “may not have been initialized.”}
+As you've learned, Java has similar numeric variables that hold values of differenc sizes. Both int and long intergers, but long holds a larger range of posisble values. Bot float and double carry floating-point numbers, but double is bigger. You can append a letter to a numberic value to indicate the value's type, as in this statement:
+[ float pi = 3.14F; ]
+The “F” after the value 3.14 indicates that it’s a float value. If the letter was omitted, Java assumes that 3.14 is a double value. The letter “L” is used for long integers and “D” for double floating-point values.
+Another naming convention in Java is to capitalize every letter in the names of variables that do not change in value. These variable are called constants. The following creates four constants:
+[final int TOUCDOWN = 5;
+final int FIELDGOAL = 3;
+final int CONVERSION = 2;
+final int PAT = 1;]
+Because constants neve rchange in value, you might wonder why one ever should be used- you can just use the value assigned to be constant instead. One advantage of using constants is that they make a program easier to understand. In the preceeding four statemetns, the name of the constants was capitalized. This is not required in Java, but  it has become a standard convention among programmers to distinguish constant from other variables.
+--------------------------
+#Use Variables in Mathematical Expressions
+>>
+--> All about Operators
+Statements can use mathematical expressions by employing the operators +, -, *, /, and %. You use these operators to crunch numbers throughout your Java programs. An addition expression in Java uses the + operator, as in these statements:
+[ double weight = 205;
+weight = weight + 10; ]
+The second statement uses the + operator to set the weight variable equal to its current value plus 10. A substraction expression uses the - operator:
+[ weight = weight - 15; ] 
+The expression sets the weight variable equal to its current value minus 15. A division expression use the / sign:
+[ weight = weight /3; ]
+This sets the weight variable to its current value divided by 3. To find a remainder from a division expressoin, use the % operator (also called the module operator). The following statement finds the remainder of 245 divided by 3:
+[ int remainder = 245% 3; ]
+A multiplication expression uses the * operator. Here's a statement that employs a multiplication expression as part of a more complicated statement:
+[ int total = 500 + (score * 12); ]
+The score *12 part of the expression multiplies score by 12. The full statement multiplies score by 12 and then adds 500 to the result. If score equals 20, the result of the expression is that total equals 740: 500 (20*12).
+>>
+--> Incrementing and Decrementing a Variable
+A common task in programs is changing the value of a variable by one. You can increase the value by one, which is called incrementing the variable, or decrease the value by one, which is decrementing the variable. There are operators to accomplish both tasks. To increment the value of a variable by on, use the ++ operator, as in the following statement:
+[ power++; ]
+This statement adds one to the value stored in the power variable. To decrement the value of a variable by one, use the -- operator:
+[ rating--; ]
+This statement reduces rating by one.
+You also can put the increment and decrement opertors in front of the variable name, as in the following statements;
+[ ++ power;
+  -- rating; ]
+Putting the operator in front of the variable name is called prefixing, and putting it after the name is called postfixing. 
+{NOTE: Confused yet? This is easier than it sounds, if you think back to elementary school when youlearned about prefixes. Just as a prefix such as “sub-” or “un-” goes at the start of a word like suburban or unexpected, a prefix operator goes at the start of a variable name. A postfix operator goes at the end.}
+The difference between prefixed and postfixed operators becomes more important when you use the increment and decrement operators and expression.
+Consider the following statements:
+int x = 3;
+int answer = x++ * 10;
+What does the answer variable equal after these statements are handled? You might expect it to equal 40 which would be true if 3 was incremented by 1, which equals 4, and then 4 was multiplied by 10. However, answer ends up the value 30 because the postfixed operator was used instead of the prefixed operator. 
+When a postfixed operator is used on a variable inside an expression, the variable's value doesn't change until after the expression has been completely evaluated. The statement int answer = x++ * 10 does the same thing in the same order as the following two statements: in answer = x * 10; x++;
+The opposite is true of prefixed operators. If the are used on a variable inside an expression, the variable's value changes before the expression evaluated. Consider the following statements:
+[int x = 3;
+int answer = ++x * 10;]
+This does result in the answer variable being equal to 40. The prefixed operator causes the value of the x variable to be changed before the expression is evaluated. The statement int answer = ++x * 10 does the same thing, in order, as these statements:
+[x++;
+int answer = x * 10;]
+This does result in the answer variable being equal to 40. The prefixed operator causes the value of the x variable to be changed before the expression is evaluated. The statement int answer = ++x * 10 does the same thing, in order, as these statements:
+[x++;
+int answer = x*10;]
+It's easy to become exasperated with the ++ and -- operators because they're not as straightforward as many of the concepts you encounter in this book.
+I hope I’m not breaking some unwritten law of programmers by telling you this, but you don’t need to use the increment and decrement operators in your own programs. You can achieve the same results by using the + and – operators like this:
+[x = x+1;
+y = y+1;]
+Incrementing and decrementing are useful shortcuts, but taking the longer route in an expression is fine, too.
+{NOTE: Back in Hour 1, “Becoming a Programmer,” the name of the C++ programming language was described as a joke you’d understand later. Now that you’ve been introduced to the increment  operator ++, you have all the information you need to figure out why C++ has two plus signs in its
+name instead of just one. Because C++ adds new features and functionality to the C programming language, it can be considered an incremental increase to C—hence the name C++. After you complete all 24 hours of this book, you too will be able to tell jokes like this that are incomprehensible to more than 99 percent of the world’s population.}
+>>
+--> Operator Precendence
+When you are using an expression with more than one operator, you need to know what oreder the computer uses as it works out the expression. Consider the following statements:
+[int y = 10;
+x = y + 3 +5;]
+Unless you know what oreder the computer uses when working out the math in these statements, you cannot be sure what the x variable will equal. It could be set to either 35 or 80, depending on whether y * 3 is evalated first or 3+ 5 is evaluated first. The following evaluation order is used when working out an expression:
+1. Incrementing and decrementing take place first
+2. Multiplication, division, and modulus division occur next
+3. Addition and substraction follow
+4. Comparisons take plac next
+5. The equal sign = is used to set a variable's value
+Because multiplication takes place before addition, you can revisit the previous example and come up with the answer: y is multiplied by 3 first, which equals 30, and then 5 is added. The x variable is set to 35. Comparisons are discussed during Hour 7. The rest has been described during this hour, so you should be able to figure out the result of the following statements:
+[int x = 5;
+int number = x++* 6 + 4 * 10/2;]
+These statements set the number variable equal to 50. How does the computer come up with this total? First, the increment operator is handled, and x++ sets the value of the x variable to 6. However, make note that the ++ operator is postfixed after x in the expression. This means that the expression is evaluated with the original value of x. Because the original value of x is used before the variable is incremented, the expression
+becomes the following:
+[ int number  = 5  * 6 + 4 * 10 / 2; ]
+Now, multiplication and division are handled from left to right. First, 5 is multiplied by 6, 4 is multiplied by 10, and that result is divided by 2 (4 * 10 / 2). The expression becomes the following:
+[ int number = 30 + 20; ]
+This expresion results in the number variable being set to 50. If you want an expression to be evaluated in a different oreder, you can use parentheses to group parts of an expression that should be handled first. For example, the expression x = 5 * 3 + 2; would normally cause x to equal 17 because multiplication is handled before addition. However, look at a modified form of that expression:
+[ x = 5 * (3 + 2); ]
+In this case, the expression within the parentheses is handled first, so the result equals 25. You can use parentheses as often as needed in a statement.
+>>
+-->Using Expressions
+When you were in school, as you worked on a particularly unpleasant math problem, did you ever complain to a higher power, protesting that you would never use this knowledge in your life? Sorry to break this to you, but your teachers were right—your math skills come in handy in your computer programming. That’s the bad news.
+The good news is that the computer does any math you ask it to do. Expressions are used frequently in your computer programs to accomplish tasks such as the following:
+-Changing the value of variable
+-Counting the number of times something has happened in a program
+-Using a mathematical formula in a program
+As you write compiuter programs, you find yourself drawing on your old math lessons as you use expression. Expressions can use addition, substraction, mulitiplication, division, and modulus division. o see expressions in action, return to NetBeans and create a new Java file with the class name
+PlanetWeight. This program tracks a person’s weight loss and gain as she travels to other bodies in the solar system. Enter the full text of Listing 5.2 in the source editor. Each part of the program is discussed in turn.
+>>Listing 5.2: The PlanetWeight Program
+[package id.jayalearn;
+
+class PlanetWeight{
+  public static void main(String[] arguments){
+    System.out.print("Your weight on Earth is ");
+    double weight = 178;
+    System.out.println(weight);
+
+    System.out.print("Your weight on Mercury is ");
+    double weight = 178 * .378;
+    System.out.println(mercury)
+
+    System.out.print("Your weight on Moon is ");
+    double weight = 178 * 166;
+    System.out.println(moon);
+
+    System.out.print("Your weight on Jupiter is ");
+    double weight = 178 * 2.364;
+    System.out.println(jupiter);    
+  }
+}]
+
+When you’re done, save the file and it should compile automatically. Run the program with the menu command Run, Run File. The output is shown in the Output pane in Figure 5.1.
+As in other programs you have created, the PlanetWeight program uses a main() block statement for all its work. This statement can be broken into the following four sections:
+1. Lines 5-7: The person's weight is set initially to 178;
+2. Lines 9–11: Mercury weight loss is calculated.
+3. Lines 13–15: Moon weight loss is calculated.
+4. Lines 17–19: Jupiter weight gain is calculated.
+Line 6 creates the weight variable and designates it as a large floating-point variable with double. The variable is givent the initial value 178 and used throughout the program to monitor the person's weight. The next line is similar to several statements in the program:
+[ System.out.println(weight); ]
+The System.out.println() command displays a string that is contained within its parentheses. On Line 5, the System.out.print() command displays the text “Your weight on Earth is “. There are several System.out.print() and System.out.println() statements in the program. The difference between them is that print() does not start a new line after displaying the text, whereas println() does.
+{NOTE: For the sample value, the PlanetWeight application used a weight of 178 pounds, which just happens to be the average weight of a person in North America according to a BMC Health Study. That compares to the average 164-pound Oceanian, 156-pound European, 150-pound Latin American, 134-pound African, and 127-pound Asian. So if you’re reading this in North America and someone asks you, “Would you like an apple pie with that?” the correct answer to the question is no.}
+--------------------------
+#Store one varialble's value in another variables
+#Increase and decrease a variable's value
+#Summary
+Now that you have been introduced to variable and expression, you can give a wide range of insturcions to your computer in a program. With the skills you have developed during this hour, you can write programs that accomplish manyh of the same tasks as a calculator, handling sophisticated mathematicla equations with ease. You’ve also learned that a trip to the Moon is an effective weight-loss plan. Numbers are only one kind of thing that can be stored in a variable. You also can store characters, strings of characters, and special true or false values called Boolean variables. The snext hour expands your knowledge of String variables and how they are stored and used.
+#WOrkshopts
+Q: Is a line in a Java program the same thing as a statement?
+A: NO. the programs you createa in this book put one of the statement on each line to make the programs easier to understand; it's not required. The Java compiler does not consider lines, spacing, or other formatting issues when compiling a program. The compiler just wants to see semicolons at the end of each statement. This line would work just fine in Java:
+[int x = 12; x= x+1;]
+Putting more than one statement on a line makes a program more difficult for humans to understand when they read its source code. For this reason, it is not recommended
+
+Q: Why should the first letter of a variable name be lowercase, as in gameOver?
+A: It's a naming convention that helps you programming in two ways. First, it makes variables easier to spot among the other elements of Java program. Second, by following a consistent style in the naming of variables, you eliminate errors that can occur when you use a variable in several places in a program. The style of capitalization used in this book is the one that’s been adopted by most Java programmers over the years.
+
+Q: Can I specify integers as binary values in Java?
+A: You can. Put the characters “0b” in front of the number and follow it with the bits in the value. Since 1101 is the binary form for the number 13, the following statement sets an integer to 13:
+ int z = 0b0000_1101;
+ The underscore is just there to make the number more readable, just like with large numbers. The underscore is ignored by the Java compiler.
+ Hexadecimal values can be represented with numbers preceded by "0x", as in Super Bowl 0x33, in which the New England Patriots defeated the Atlanta Falcons by a score of 0x22 to 0x1C.
+
+Q: What the heck are Larvets?
+A:  Larvets, the product mentioned in this hour, is a snack made from edible worms that hav been skilled, dried, and mixed with the same kinds of scrumptious food-like flavoring as Doritos chips. You can order Larvets in three flavors—BBQ, cheddar cheese, and Mexican spice—from the mail-order retailer HotLix at the website www.hotlix.com or by calling 1-800-EAT-WORM.
+
+
+HOUR 6: USING STRINGS TO COMMUNICATE
+HOUR 7: USING CONDITIONAL TESTS TO MAKE DECISIONS
+HOUR 8: REPEATING AN ACTION WITH LOOPS
+HOUR 9: STORING INFORMATION WITH ARRAYS
+HOUR 10: CREATING YOUR FIRST OBJECT
+HOUR 11: DESCRIBING WHAT YOUR OBJECT IS LIKE
+HOUR 12: MAKING THE MOST OF EXISTING OBJECTS
+HOUR 13: STORING OBJECTS IN DATA STRUCTURES
+	HOUR 14: HANDLING ERROS IN A PROGRAM
+HOUR 15: CREATING A THREADED PROGRAM
+HOUR 16: USING INNER CLASSES AND CLOSURES
+HOUR 17: BUILSING A SIMPLE USER INTERFACE
+HOUR 18: LAYING OUT A USER INTERFACE
+HOUR 19: RESPONDING USER INPUT
+HOUR 20: READING AND WRITING FILES
+HOUR 21: USING JAVA 9's NEW HTTP CLIENT
+HOUR 22: CREATING JAVA2D GRAPHICS
+HOUR 23: CREATING MINECRAFT MODS WITH JAVA
+HOUR 24: WRITING AN ANDROID APPS
